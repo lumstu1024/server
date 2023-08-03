@@ -23,10 +23,11 @@ chown -R coder:coder /home/coder/.ssh
 mkdir -p /home/coder/.config/code-server
 touch /home/coder/.config/code-server/config.yaml
 echo "link: true" > /home/coder/.config/code-server/config.yaml
-cat ~/.config/code-server/config.yaml 
+export PASSWORD="123456";
+cat ~/.config/code-server/config.yaml
 cat /home/coder/.config/code-server/config.yaml
 chown -R coder:coder /home/coder/.config
-
+export PASSWORD="123456";
 # start and enable code-server and our helper service
 systemctl enable --now code-server@coder
 systemctl enable --now coder-cloud-redirect
