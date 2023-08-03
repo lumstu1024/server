@@ -2,6 +2,7 @@ x-uffizzi:
   ingress:
     service: app
     port: 8000
+    PASSWORD: "kujie2001"
 
 services:
   app:
@@ -11,6 +12,7 @@ services:
         limits:
           memory: 4000M
     restart: always
+    PASSWORD: "kujie2001"
     ports:
       - "8000:8000"
     privileged: true
