@@ -11,7 +11,7 @@ get_deployment() {
     echo "$name (image: $image)"
     echo "http://$ip:$port"
     echo $(kubectl get secret $name-dev-code-server -o jsonpath="{.data.password}" | base64 --decode)
-    cat ~/.config/code-server/config.yaml 
+cat /home/coder/.config/code-server/config.yaml
     echo "---"
 }
 
