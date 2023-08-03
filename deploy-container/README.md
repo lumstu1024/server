@@ -73,6 +73,7 @@ $ rclone config
 # 3. Encode your rclone config and copy to your clipboard
 $ cat $(rclone config file | sed -n 2p) | base64 --wrap=0 # Linux
 $ cat $(rclone config file | sed -n 2p) | base64 --b 0 # MacOS
+
 ```
 
 Now, you can add the following the environment variables in the code-server cloud app:
